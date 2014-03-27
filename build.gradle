@@ -1,0 +1,23 @@
+allprojects {
+  group = 'il.ac.idc.jdt'
+  version = '2.0.0-SNAPSHOT'
+}
+
+subprojects {
+  apply plugin: 'java'
+
+  repositories {
+    mavenCentral()
+  }
+
+  dependencies {
+    testCompile 'org.testng:testng:6.5.2'
+    testCompile 'org.hamcrest:hamcrest-core:1.3.RC2'
+    testCompile 'org.hamcrest:hamcrest-library:1.3.RC2'
+
+  }
+}
+
+task wrapper(type: Wrapper) {
+  gradleVersion='1.11'
+}
